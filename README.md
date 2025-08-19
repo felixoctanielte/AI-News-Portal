@@ -49,7 +49,7 @@ cd server
 npm install
 ```
 
-Usage
+💻 Usage
 Start Backend
 ```bash
 cd server
@@ -60,7 +60,7 @@ Start Frontend
 npm run dev
 ```
 
-Project Structure
+📁 Project Structure
 ```bash
 ai-news-portal/
 ├─ server/
