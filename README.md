@@ -61,8 +61,17 @@ npm run dev
 ```
 
 Project Structure
-
-<img width="488" height="304" alt="image" src="https://github.com/user-attachments/assets/641bfa97-a864-40a5-877f-c2d9debfbd9c" />
+```bash
+ai-news-portal/
+├─ server/
+│  └─ index.js        # Express backend
+├─ src/
+│  ├─ App.jsx         # Main React component
+│  ├─ Components/
+│  │  └─ NewsItem.jsx # Individual news item
+│  └─ index.css       # Styles
+└─ package.json       # Frontend dependencies
+```
 
 Usage Notes
 
