@@ -1,0 +1,260 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+
+.search-box-wrapper {
+  display: flex;
+  align-items: center; 
+  gap: 5px; 
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.search-box-wrapper .search-box {
+  flex: 1; 
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  height: 43px; 
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.search-box-wrapper .search-box:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 4px rgba(0, 119, 204, 0.5);
+}
+
+.search-box-wrapper .search-btn {
+  background: #3f5c71;
+  color: white;
+  border: none;
+  padding: 0 16px;
+  height: 43px; /* samakan tinggi input */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.search-box-wrapper .search-btn:hover {
+  background: #787c7f;
+}
+
+
+.search-history {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.clear-btn {
+  background: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.clear-btn:hover {
+  background: #c9302c;
+}
+
+.search-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-history li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.search-history li span {
+  cursor: pointer;
+  color: #0077cc;
+}
+
+.search-history li span:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #d9534f;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  color: #c9302c;
+}
+
+
+.news-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.news-item {
+  background: white;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0077cc;
+}
+
+.news-title:hover {
+  text-decoration: underline;
+}
+
+.news-meta {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-source {
+  font-weight: 600;
+}
+
+.news-date {
+  font-style: italic;
+}
+
+
+.loader {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0077cc;
+  padding: 20px;
+}
+
+.error {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d9534f;
+  background: #fbe9e7;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 1024px) {
+  .news-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .news-title {
+    font-size: 16px;
+  }
+
+  .search-box-wrapper .search-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search-box-wrapper .search-btn {
+    font-size: 14px;
+    padding: 0 12px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .search-history {
+    max-height: 120px;
+    font-size: 13px;
+  }
+
+  .news-item {
+    padding: 12px;
+  }
+
+  
+  .search-box-wrapper {
+    flex-direction: row; 
+    align-items: center;
+  }
+
+  .search-box-wrapper .search-box {
+    flex: 1;
+    height: 40px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search-box-wrapper .search-btn {
+    height: 40px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+}
