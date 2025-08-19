@@ -1,12 +1,93 @@
-# React + Vite
+AI News Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application built with Vite that fetches the latest news about Artificial Intelligence from multiple public news APIs. It includes a search feature with search history, highlighting search terms in the results, and automatic deduplication of news articles.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fetches news from NewsAPI, GNews, and CurrentsAPI.
 
-## Expanding the ESLint configuration
+Displays news headlines with links, source, and published date.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Search functionality with:
+
+Highlighted search keywords in titles.
+
+Search history management (click to reuse, delete, or clear all).
+
+Responsive design for desktop and mobile.
+
+Handles API errors gracefully.
+
+Deduplicates articles and sorts by latest published date.
+
+Tech Stack
+
+Frontend: React + Vite + Tailwind CSS
+
+Backend: Node.js + Express + CORS
+
+APIs Used:
+
+NewsAPI
+
+GNews
+
+CurrentsAPI
+
+Installation
+
+Clone the repository
+
+git clone <your-repo-url>
+cd ai-news-portal
+
+
+Install dependencies for backend
+
+cd server
+npm install
+
+
+Install dependencies for frontend
+
+cd ../
+npm install
+
+Usage
+Start Backend
+cd server
+node index.js
+
+
+Backend runs on http://localhost:5000 and provides the /api/news endpoint.
+
+Start Frontend
+npm run dev
+
+
+Frontend runs on http://localhost:5173 (default Vite port) and fetches news from the backend.
+
+Project Structure
+ai-news-portal/
+├─ server/
+│  └─ index.js        # Express backend
+├─ src/
+│  ├─ App.jsx         # Main React component
+│  ├─ Components/
+│  │  └─ NewsItem.jsx # Individual news item
+│  └─ index.css       # Styles
+└─ package.json       # Frontend dependencies
+
+Usage Notes
+
+Press Enter or click the search button to search news.
+
+Click a history item to re-search or use the delete button to remove it.
+
+Click “Clear All” to reset the search history.
+
+Latest news is always displayed first, with duplicate articles removed automatically.
+
+License
+
+MIT License
