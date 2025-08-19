@@ -37,18 +37,28 @@ git clone <your-repo-url>
 cd ai-news-portal
 ```
 2. Install dependencies for backend
-   <img width="942" height="84" alt="image" src="https://github.com/user-attachments/assets/93c511f3-996d-4874-8411-34cd304e8168" />
+ ```bash
+cd server
+npm install
+
+```
 
 4. Install dependencies for frontend
-<img width="772" height="101" alt="image" src="https://github.com/user-attachments/assets/efe197cf-a732-47a9-a043-2dc6bb49421f" />
+```bash
+cd server
+npm install
+```
 
 Usage
 Start Backend
-<img width="815" height="104" alt="image" src="https://github.com/user-attachments/assets/6858948f-7e96-416c-b09e-9c1d28a93a8b" />
-
+```bash
+cd server
+node index.js
+```
 Start Frontend
-<img width="820" height="91" alt="image" src="https://github.com/user-attachments/assets/d577b61c-4a37-43d7-90a0-7c4604cd4ff2" />
-
+```bash
+npm run dev
+```
 
 Project Structure
 
